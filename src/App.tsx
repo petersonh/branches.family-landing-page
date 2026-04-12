@@ -198,40 +198,6 @@ const faqSections: InfoSection[] = [
   },
 ];
 
-const aboutSections: InfoSection[] = [
-  {
-    heading: 'What Branches.Family Is For',
-    body: 'Branches.Family is built for families who want something more personal than a chart and more flexible than a one-off print order. It is a way to gather names, dates, stories, and photographs into a family tree that feels worth keeping.',
-  },
-  {
-    heading: 'How It Starts',
-    body: 'You can begin from scratch or bring in a tree you already have. From there, Branches.Family helps shape the information into a visual layout that is easier to share with relatives and easier to turn into artwork.',
-  },
-  {
-    heading: 'Why It Exists',
-    body: 'Family history often lives in scattered notes, old albums, and the memories of one or two relatives. Branches.Family is meant to help capture those details while they are still close at hand.',
-  },
-  {
-    heading: 'Who It Helps',
-    body: 'It is especially useful for reunion organizers, parents building something to pass down, and the family member who usually ends up collecting everyone’s corrections and forgotten names.',
-  },
-];
-
-const blogSections: InfoSection[] = [
-  {
-    heading: 'A Place for Future Stories',
-    body: 'The Branches.Family blog is not populated yet, but this page is where updates, family history ideas, product notes, and examples of thoughtful tree-building will live.',
-  },
-  {
-    heading: 'What You Can Expect',
-    body: 'Future posts can cover topics like organizing family photos, collecting names before reunions, preparing a tree for printing, and preserving stories alongside dates and places.',
-  },
-  {
-    heading: 'Built Slowly and Carefully',
-    body: 'Rather than filling this section with generic articles, the plan is to publish practical pieces that are genuinely useful for families making something together.',
-  },
-];
-
 const privacySections: InfoSection[] = [
   {
     heading: 'Your Data',
@@ -383,7 +349,6 @@ function InfoPage({
   subtitle,
   intro,
   sections,
-  currentRoute,
   onNavigate,
   onScrollToPanel,
   faqLayout,
@@ -395,7 +360,6 @@ function InfoPage({
   subtitle?: string;
   intro: string | React.ReactNode;
   sections: InfoSection[];
-  currentRoute: AppRoute;
   onNavigate: (route: AppRoute) => void;
   onScrollToPanel: (panelIndex: number) => void;
   faqLayout?: boolean;
@@ -779,7 +743,6 @@ export default function App() {
           </>
         }
         sections={[]}
-        currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
       />
@@ -796,7 +759,6 @@ export default function App() {
         sections={[]}
         placeholderImage="/images/under_construction.svg"
         placeholderText="Under construction"
-        currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
       />
@@ -811,7 +773,6 @@ export default function App() {
         heroImage="/images/privacy_icon.svg"
         intro=""
         sections={privacySections}
-        currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
       />
@@ -826,7 +787,6 @@ export default function App() {
         heroImage="/images/shipping_icon.svg"
         intro=""
         sections={shippingSections}
-        currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
       />
@@ -842,7 +802,6 @@ export default function App() {
         intro=""
         sections={faqSections}
         faqLayout
-        currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
       />
