@@ -24,23 +24,23 @@ const footerColumns: {
     id: 'explore',
     title: 'Explore',
     links: [
-      { label: 'About', href: '/about' },
-      { label: 'Blog', href: '/blog' },
+      { label: 'Our Story', href: '/about' },
+      { label: 'Shipping & Returns', href: '/shipping-and-returns' },
     ],
   },
   {
     id: 'questions',
     title: 'Questions?',
     links: [
-      { label: 'Shipping and Returns', href: '/shipping-and-returns' },
       { label: 'FAQ', href: '/faq' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
     ],
   },
   {
     id: 'legal',
     title: 'Legal',
     links: [
-      { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Blog', href: '/blog' },
     ],
   },
 ];
@@ -69,7 +69,7 @@ interface InfoSection {
   body: ReactNode;
 }
 
-type SocialPlatform = 'instagram' | 'tiktok' | 'facebook' | 'x';
+type SocialPlatform = 'instagram' | 'tiktok' | 'facebook' | 'x' | 'pinterest';
 
 const panels: Panel[] = [
   {
@@ -80,7 +80,7 @@ const panels: Panel[] = [
   },
   {
     heading: 'How It Works',
-    body: 'Branches turns your family history into a piece of art. Add names, dates, and photos - we\'ll transform them into illustrated portraits and arrange everything into a tree that\'s uniquely yours. Share it online with family or order a print for your wall.',
+    body: 'Branches.Family turns your family history into a piece of art. Add names, dates, and photos - we\'ll transform them into illustrated portraits and arrange everything into a tree that\'s uniquely yours. Share it online with family or order a print for your wall.',
     cta: 'Build Your Tree ➳',
     image: '/images/photo_to_painting.png',
   },
@@ -119,7 +119,7 @@ const panels: Panel[] = [
 const shippingSections: InfoSection[] = [
   {
     heading: 'Digital Delivery',
-    body: 'Branches currently offers a free builder and a print-ready digital download. Once your artwork is ready, there is nothing physical to ship, so delivery happens digitally.',
+    body: 'Branches.Family currently offers a free builder and a print-ready digital download. Once your artwork is ready, there is nothing physical to ship, so delivery happens digitally.',
   },
   {
     heading: 'Printed Orders',
@@ -142,7 +142,7 @@ const faqSections: InfoSection[] = [
   },
   {
     heading: 'Can I import a tree I already made?',
-    body: 'Yes. Branches is designed for both new family trees and ones you have already started elsewhere.',
+    body: 'Yes. Branches.Family is designed for both new family trees and ones you have already started elsewhere.',
   },
   {
     heading: 'Can I add photographs?',
@@ -156,20 +156,60 @@ const faqSections: InfoSection[] = [
     heading: 'Are physical prints available now?',
     body: 'Not yet. Print-ready digital downloads are available now, and shipped prints are listed as coming soon.',
   },
+  {
+    heading: 'Who handles the printing?',
+    body: 'We partner with Prodigi, a professional print fulfillment service trusted by creators and businesses worldwide. They produce gallery-quality prints on premium materials and handle packaging and delivery on our behalf.',
+  },
+  {
+    heading: 'Where are the prints produced?',
+    body: 'Prodigi operates fulfillment centres around the world. When you place an order, they automatically route it to the facility closest to your shipping address, which helps keep delivery times short and shipping costs down.',
+  },
+  {
+    heading: 'How much does shipping cost?',
+    body: 'Shipping costs vary depending on your location and the size of your print. You can see an estimated shipping price on the preview page before you commit to an order — no surprises at checkout.',
+  },
+  {
+    heading: 'Where is Branches.Family based?',
+    body: 'Branches.Family is based in Toronto, Canada. The product is built and maintained here, though prints can be shipped to most countries worldwide through our fulfillment partner.',
+  },
+  {
+    heading: 'How are the illustrated portraits created?',
+    body: 'Portraits are generated using AI style transfer. You upload a photo and our system transforms it into a hand-illustrated look that matches the aesthetic of your tree. The result is a consistent, cohesive visual style across every family member.',
+  },
+  {
+    heading: 'What types of AI does Branches.Family use?',
+    body: 'We use style transfer technology to turn portrait photos into illustrated artwork. This is a specific branch of AI focused on applying artistic styles to images — it is not generative AI that creates faces from scratch. Your photos remain the foundation of every portrait.',
+  },
+  {
+    heading: 'Which AI model provider do you use?',
+    body: 'We use Replicate as our model hosting provider. Replicate gives us access to high-quality style transfer models with reliable performance, so your portraits are processed quickly and consistently.',
+  },
+  {
+    heading: 'What is the maximum number of people I can add to a tree?',
+    body: 'We have stress-tested trees with up to 150 family members and everything renders smoothly. If your family tree is larger than that, please reach out through the contact form on the home page and we will work with you to make sure it displays properly.',
+  },
+  {
+    heading: 'Can you add a feature I am looking for?',
+    body: 'Possibly! We are always looking for ways to improve Branches.Family. If there is a feature you would like to see, send us a message through the contact form on the home page. We read every request and use them to guide what we build next.',
+  },
+  {
+    heading: 'Will there be more portrait styles to choose from?',
+    body: 'Yes. We are actively working on expanding the range of illustration styles available. Our goal is to offer a variety of artistic looks so you can pick the one that best fits your family tree.',
+  },
 ];
 
 const aboutSections: InfoSection[] = [
   {
-    heading: 'What Branches Is For',
-    body: 'Branches is built for families who want something more personal than a chart and more flexible than a one-off print order. It is a way to gather names, dates, stories, and photographs into a family tree that feels worth keeping.',
+    heading: 'What Branches.Family Is For',
+    body: 'Branches.Family is built for families who want something more personal than a chart and more flexible than a one-off print order. It is a way to gather names, dates, stories, and photographs into a family tree that feels worth keeping.',
   },
   {
     heading: 'How It Starts',
-    body: 'You can begin from scratch or bring in a tree you already have. From there, Branches helps shape the information into a visual layout that is easier to share with relatives and easier to turn into artwork.',
+    body: 'You can begin from scratch or bring in a tree you already have. From there, Branches.Family helps shape the information into a visual layout that is easier to share with relatives and easier to turn into artwork.',
   },
   {
     heading: 'Why It Exists',
-    body: 'Family history often lives in scattered notes, old albums, and the memories of one or two relatives. Branches is meant to help capture those details while they are still close at hand.',
+    body: 'Family history often lives in scattered notes, old albums, and the memories of one or two relatives. Branches.Family is meant to help capture those details while they are still close at hand.',
   },
   {
     heading: 'Who It Helps',
@@ -180,7 +220,7 @@ const aboutSections: InfoSection[] = [
 const blogSections: InfoSection[] = [
   {
     heading: 'A Place for Future Stories',
-    body: 'The Branches blog is not populated yet, but this page is where updates, family history ideas, product notes, and examples of thoughtful tree-building will live.',
+    body: 'The Branches.Family blog is not populated yet, but this page is where updates, family history ideas, product notes, and examples of thoughtful tree-building will live.',
   },
   {
     heading: 'What You Can Expect',
@@ -194,20 +234,28 @@ const blogSections: InfoSection[] = [
 
 const privacySections: InfoSection[] = [
   {
-    heading: 'What You Share',
-    body: 'When you use Branches, the text and images you provide may be processed so the app can generate previews and family-tree artwork. That information is used to deliver the requested experience, not to build advertising profiles.',
+    heading: 'Your Data',
+    body: 'When you use our family tree generator, the photos and text you provide are sent securely to our server for processing. We do not store this data after your images and previews are created. Once processing is complete, it is automatically deleted from our systems.',
   },
   {
-    heading: 'How It Is Used',
-    body: 'Uploaded content is handled for the purpose of creating artwork, previews, and exports. If third-party services are involved in image generation or fulfillment, they are used as part of that workflow rather than for unrelated marketing.',
+    heading: 'Image Processing',
+    body: "To create the artwork, some information such as photos is also sent to Google's servers for image processing. Google may temporarily store this content to generate the requested output, but we do not allow them to use your data for advertising or profiling.",
   },
   {
-    heading: 'What Is Not the Goal',
-    body: 'Branches is not designed around selling personal information or turning family content into audience data. The purpose is to help families make and preserve a meaningful record.',
+    heading: 'Printed Products',
+    body: "If you order a printed product, the final artwork file is securely sent to Printful's API for production and fulfillment. Printful may temporarily store the file as part of the printing process. We do not keep a copy, and we do not allow Printful to use it for marketing or other purposes.",
   },
   {
-    heading: 'Questions About Data',
-    body: 'If you want clarification about how a photo, message, or export is handled, use the contact section on the home page and ask directly before submitting anything sensitive.',
+    heading: 'Third Parties',
+    body: 'We do not sell, rent, or share your personal information with third parties for marketing.',
+  },
+  {
+    heading: 'Analytics',
+    body: 'Basic usage data such as page visits and performance metrics may be collected through standard analytics tools to help improve the service.',
+  },
+  {
+    heading: 'Consent & Questions',
+    body: 'By using this website, you consent to this processing. If you have any questions about how your data is handled, please contact us using the form on the home page.',
   },
 ];
 
@@ -215,6 +263,7 @@ const socialLinks: Array<{ label: string; platform: SocialPlatform; href: string
   { label: 'Instagram', platform: 'instagram', href: '#' },
   { label: 'TikTok', platform: 'tiktok', href: '#' },
   { label: 'Facebook', platform: 'facebook', href: '#' },
+  { label: 'Pinterest', platform: 'pinterest', href: '#' },
   { label: 'X', platform: 'x', href: '#' },
 ];
 
@@ -241,6 +290,14 @@ function SocialIcon({ platform }: { platform: SocialPlatform }) {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M13.3 20v-6.6h2.3l.4-2.8h-2.7V8.8c0-.8.2-1.4 1.4-1.4H16V4.9c-.2 0-.9-.1-1.8-.1-2.7 0-4.4 1.6-4.4 4.6v1.2H7.5v2.8h2.3V20h3.5Z" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (platform === 'pinterest') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.08 2.46 7.58 5.97 9.1-.08-.74-.16-1.88.03-2.69.17-.73 1.12-4.74 1.12-4.74s-.29-.57-.29-1.41c0-1.32.77-2.31 1.72-2.31.81 0 1.2.61 1.2 1.34 0 .82-.52 2.04-.79 3.17-.22.94.47 1.71 1.4 1.71 1.68 0 2.97-1.77 2.97-4.33 0-2.26-1.63-3.84-3.95-3.84-2.69 0-4.27 2.02-4.27 4.11 0 .81.31 1.69.7 2.16.08.09.09.18.07.27-.07.3-.24.94-.27 1.07-.04.18-.14.22-.33.13-1.23-.57-2-2.37-2-3.81 0-3.1 2.25-5.95 6.49-5.95 3.41 0 6.06 2.43 6.06 5.67 0 3.39-2.14 6.11-5.1 6.11-1 0-1.93-.52-2.25-1.13l-.61 2.34c-.22.86-.82 1.93-1.22 2.59.92.28 1.9.44 2.91.44 5.52 0 10-4.48 10-10S17.52 2 12 2Z" fill="currentColor" />
       </svg>
     );
   }
@@ -323,85 +380,108 @@ function SiteFooter({
 
 function InfoPage({
   title,
+  subtitle,
   intro,
   sections,
   currentRoute,
   onNavigate,
   onScrollToPanel,
+  faqLayout,
+  heroImage,
+  placeholderImage,
+  placeholderText,
 }: {
   title: string;
-  intro: string;
+  subtitle?: string;
+  intro: string | React.ReactNode;
   sections: InfoSection[];
   currentRoute: AppRoute;
   onNavigate: (route: AppRoute) => void;
   onScrollToPanel: (panelIndex: number) => void;
+  faqLayout?: boolean;
+  heroImage?: string;
+  placeholderImage?: string;
+  placeholderText?: string;
 }) {
   return (
     <div className="info-page-shell">
-      <header className="subpage-header">
-        <div className="subpage-header-inner">
-          <button type="button" className="site-logo-button" onClick={() => onNavigate('/')}>
-            <img className="site-logo" src="/images/logo.svg" alt="Branches Family Artwork" />
-          </button>
-
-          <nav className="subpage-nav" aria-label="Secondary navigation">
-            <button type="button" className="subpage-link" onClick={() => onNavigate('/')}>
-              Home
-            </button>
-            <button
-              type="button"
-              className={`subpage-link${currentRoute === '/about' ? ' is-active' : ''}`}
-              onClick={() => onNavigate('/about')}
-            >
-              About
-            </button>
-            <button
-              type="button"
-              className={`subpage-link${currentRoute === '/blog' ? ' is-active' : ''}`}
-              onClick={() => onNavigate('/blog')}
-            >
-              Blog
-            </button>
-            <button
-              type="button"
-              className={`subpage-link${currentRoute === '/privacy-policy' ? ' is-active' : ''}`}
-              onClick={() => onNavigate('/privacy-policy')}
-            >
-              Privacy Policy
-            </button>
-            <button
-              type="button"
-              className={`subpage-link${currentRoute === '/shipping-and-returns' ? ' is-active' : ''}`}
-              onClick={() => onNavigate('/shipping-and-returns')}
-            >
-              Shipping and Returns
-            </button>
-            <button
-              type="button"
-              className={`subpage-link${currentRoute === '/faq' ? ' is-active' : ''}`}
-              onClick={() => onNavigate('/faq')}
-            >
-              FAQ
-            </button>
+      <header className="site-header info-page-header">
+        <div className="header-inner">
+          <a href="/" onClick={(e) => { e.preventDefault(); onNavigate('/'); }}>
+            <img className="site-logo logo-vertical" src="/images/logo.svg" alt="Branches.Family" />
+            <img className="site-logo logo-horizontal" src="/images/logo_horizontal.svg" alt="Branches.Family" />
+          </a>
+          <nav aria-label="Primary navigation">
+            <ul className="nav-list">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onScrollToPanel(item.panelIndex);
+                    }}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </nav>
         </div>
       </header>
 
       <main className="info-page-main">
-        <section className="info-hero">
-          <p className="info-eyebrow">Helpful Details</p>
-          <h1>{title}</h1>
-          <p>{intro}</p>
-        </section>
+        <div className="info-content-card">
+          <section className="info-hero">
+            <div className="info-hero-heading">
+              {heroImage && <img src={heroImage} alt="" className="info-hero-image" />}
+              <div className="info-hero-titles">
+                <h1>{title}</h1>
+                {subtitle && <p className="info-hero-subtitle">{subtitle}</p>}
+              </div>
+            </div>
+            <hr className="info-hero-divider" />
+            {intro && (
+              <div className="info-hero-intro">
+                {typeof intro === 'string' ? (
+                  intro.split('\n\n').map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))
+                ) : (
+                  intro
+                )}
+              </div>
+            )}
+          </section>
 
-        <section className="info-section-grid">
-          {sections.map((section) => (
-            <article key={section.heading} className="info-card">
-              <h2>{section.heading}</h2>
-              {typeof section.body === 'string' ? <p>{section.body}</p> : section.body}
-            </article>
-          ))}
-        </section>
+          {placeholderImage ? (
+            <div className="info-placeholder">
+              <img src={placeholderImage} alt={placeholderText || ''} className="info-placeholder-image" />
+              {placeholderText && <p className="info-placeholder-text">{placeholderText}</p>}
+            </div>
+          ) : sections.length > 0 && (
+            faqLayout ? (
+              <section className="faq-list">
+                {sections.map((section) => (
+                  <div key={section.heading} className="faq-item">
+                    <h2 className="faq-question">{section.heading}</h2>
+                    {typeof section.body === 'string' ? <p className="faq-answer">{section.body}</p> : section.body}
+                  </div>
+                ))}
+              </section>
+            ) : (
+              <section className="info-section-grid">
+                {sections.map((section) => (
+                  <article key={section.heading} className="info-card">
+                    <h2>{section.heading}</h2>
+                    {typeof section.body === 'string' ? <p>{section.body}</p> : section.body}
+                  </article>
+                ))}
+              </section>
+            )
+          )}
+        </div>
       </main>
 
       <SiteFooter onNavigate={onNavigate} onScrollToPanel={onScrollToPanel} />
@@ -535,7 +615,8 @@ function LandingPage({
         <header className="site-header">
           <div className="header-inner">
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-              <img className="site-logo" src="/images/logo.svg" alt="Branches Family Artwork" />
+              <img className="site-logo logo-vertical" src="/images/logo.svg" alt="Branches.Family" />
+              <img className="site-logo logo-horizontal" src="/images/logo_horizontal.svg" alt="Branches.Family" />
             </a>
             <nav aria-label="Primary navigation">
               <ul className="nav-list">
@@ -669,26 +750,35 @@ export default function App() {
 
   useEffect(() => {
     if (route === '/') {
-      document.title = 'Branches Family Artwork';
+      document.title = 'Branches.Family';
     } else if (route === '/about') {
-      document.title = 'About | Branches Family Artwork';
+      document.title = 'Our Story | Branches.Family';
     } else if (route === '/blog') {
-      document.title = 'Blog | Branches Family Artwork';
+      document.title = 'Blog | Branches.Family';
     } else if (route === '/privacy-policy') {
-      document.title = 'Privacy Policy | Branches Family Artwork';
+      document.title = 'Privacy Policy | Branches.Family';
     } else if (route === '/shipping-and-returns') {
-      document.title = 'Shipping and Returns | Branches Family Artwork';
+      document.title = 'Shipping and Returns | Branches.Family';
     } else {
-      document.title = 'FAQ | Branches Family Artwork';
+      document.title = 'FAQ | Branches.Family';
     }
   }, [route]);
 
   if (route === '/about') {
     return (
       <InfoPage
-        title="About Branches"
-        intro="A short introduction to what Branches is trying to make easier: turning family records and photographs into something beautiful enough to share and keep."
-        sections={aboutSections}
+        title="Our Story"
+        subtitle="How a grandfather's tree became a platform for every family"
+        heroImage="/images/new_tree_icon.svg"
+        intro={
+          <>
+            <p>Years ago, my grandfather passed down a family tree he and my dad had created. It mapped our family's journey from <strong>Ireland to Canada</strong> more than 200 years ago. The tree was filled with names, dates, and handwritten notes connecting generations across an ocean. While it was an important piece of our history, I always felt I could give it an upgrade using my background in <strong>visual arts</strong> and <strong>graphics programming</strong>. 🎨</p>
+            <p>When I eventually had kids of my own, the mission became more urgent. I wanted to create a family tree they'd be <em>proud to pass down</em> to their own children someday — something visual, personal, and built to last. I started experimenting with ways to combine family data with illustrated portraits and found that the result was far more engaging than any spreadsheet or chart I had seen before. 🌳</p>
+            <p>After many late nights, plenty of coffee ☕ and coding, <strong>Branches.Family</strong> was born. What started as a personal project for my own family quickly grew into something I wanted to share with others. The goal has always been the same: make it easy for <em>anyone</em> to build a beautiful family tree, whether you are starting from scratch or picking up where a grandparent left off.</p>
+            <p>— Peter (Founder)</p>
+          </>
+        }
+        sections={[]}
         currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
@@ -699,9 +789,13 @@ export default function App() {
   if (route === '/blog') {
     return (
       <InfoPage
-        title="Branches Blog"
-        intro="A simple home for future writing about preserving family history, building better trees, and making sure the details survive beyond one generation."
-        sections={blogSections}
+        title="Blog"
+        subtitle="Stories, updates, and ideas for preserving family history"
+        heroImage="/images/blog_icon.svg"
+        intro=""
+        sections={[]}
+        placeholderImage="/images/under_construction.svg"
+        placeholderText="Under construction"
         currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
@@ -713,7 +807,9 @@ export default function App() {
     return (
       <InfoPage
         title="Privacy Policy"
-        intro="A plain-language overview of how information provided to Branches may be used while creating family-tree artwork and related exports."
+        subtitle="We take your privacy seriously"
+        heroImage="/images/privacy_icon.svg"
+        intro=""
         sections={privacySections}
         currentRoute={route}
         onNavigate={navigateTo}
@@ -725,8 +821,10 @@ export default function App() {
   if (route === '/shipping-and-returns') {
     return (
       <InfoPage
-        title="Shipping and Returns"
-        intro="A short overview of how delivery works today, what is still coming soon, and what to do if something about your tree needs attention."
+        title="Shipping & Returns"
+        subtitle="Delivery details and what to do if something needs attention"
+        heroImage="/images/shipping_icon.svg"
+        intro=""
         sections={shippingSections}
         currentRoute={route}
         onNavigate={navigateTo}
@@ -739,8 +837,11 @@ export default function App() {
     return (
       <InfoPage
         title="Frequently Asked Questions"
-        intro="The basics, collected in one place, for anyone deciding whether Branches is the right way to turn family history into something shareable and printable."
+        subtitle="The basics, all in one place"
+        heroImage="/images/faq_icon.svg"
+        intro=""
         sections={faqSections}
+        faqLayout
         currentRoute={route}
         onNavigate={navigateTo}
         onScrollToPanel={navigateToPanel}
